@@ -1,0 +1,23 @@
+.table-responsive{
+    overflow-y: auto;
+    max-height: 400px;
+}
+
+.table-responsive th{
+    width: 200px;
+    border: 2px solid #ddd;
+    padding: 7px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+.container th{
+    font-weight: bold;
+    text-align: right;
+}
+
+td{
+    text-align: center;
+}
