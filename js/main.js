@@ -18,6 +18,7 @@ function update(id){
         data:{name:name,id:id},
         success: function(e){
             alert(e);
+            location.reload();
         }
     });
 }
@@ -29,6 +30,7 @@ function deleteme(id){
         data:{id:id},
         success: function(e){
             alert(e);
+            location.reload();
         }
     });
 }
