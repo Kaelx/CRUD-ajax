@@ -3,9 +3,8 @@
     max-height: 400px;
 }
 
-.table-responsive th{
+.table-responsive th {
     width: 200px;
-    border: 2px solid #ddd;
     padding: 7px;
     text-align: center;
     position: sticky;
@@ -15,7 +14,6 @@
 
 .container th{
     font-weight: bold;
-    text-align: right;
 }
 
 td{

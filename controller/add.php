@@ -2,10 +2,7 @@
 include 'config.php';
 
 if ($_SERVER["REQUEST_METHOD"] == 'POST') {
-    if (
-        isset($_POST['fname'], $_POST['mname'], $_POST['lname'], $_POST['bday'], $_POST['age'], $_POST['address'], $_POST['phonenum']) &&
-        isset($_FILES['profile'])
-    ) {
+    if (isset($_POST['fname'], $_POST['mname'], $_POST['lname'], $_POST['bday'], $_POST['age'], $_POST['address'], $_POST['phonenum']) && isset($_FILES['profile'])) {
 
         $fname = $_POST['fname'];
         $mname = $_POST['mname'];
@@ -29,10 +26,9 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
                 echo mysqli_error($conn);
             }
         } else {
-            echo "Something Went Wrong.";
+            echo "Please fill out all form.";
         }
-    } else {
-        echo "Please fill out all form.";
+
     }
 }
 ?>
