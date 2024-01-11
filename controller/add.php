@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
           $query = "INSERT INTO users (name, email, password) VALUES ('$name', '$email', '$password')";
 
           if (mysqli_query($conn, $query)) {
-               echo 'Executed successfully!';
+               echo 'done!';
           } else {
                echo mysqli_error($conn);
           }

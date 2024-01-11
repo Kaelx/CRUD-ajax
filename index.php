@@ -7,9 +7,18 @@
 </head>
 <body>
     <!-- <form action="controller/add.php" method="post"> -->
-        <input type="text" id="name" name="name">
-        <input type="email" id="email" name="email">
-        <input type="password" id="password" name="password">
+        <div>
+            <label for="name">Enter name:</label>
+            <input type="text" id="name" name="name">
+        </div>
+        <div>
+            <label for="email">Enter email:</label>
+            <input type="email" id="email" name="email">
+        </div>
+        <div>
+            <label for="password">Enter password:</label>
+            <input type="password" id="password" name="password">
+        </div>
         <button onclick="add()">Submit</button>
     <!-- </form> -->
     <table>
