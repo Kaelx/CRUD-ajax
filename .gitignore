@@ -1,5 +1,5 @@
 # Ignore image files
 *.jpg
 *.jpeg
-# *.png
+*.png
 *.gif
