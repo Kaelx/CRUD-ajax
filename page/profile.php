@@ -48,7 +48,7 @@ include '../controller/config.php';
                     </tr>
                     <tr>
                         <th scope="row">Birthday:</th>
-                        <td><?php echo $row['bday']; ?></td>
+                        <td> <?php echo date('F d, Y', strtotime($row['bday'])); ?></td>
                     </tr>
                     <tr>
                         <th scope="row">Age:</th>

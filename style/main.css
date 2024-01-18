@@ -19,3 +19,11 @@
 td{
     text-align: center;
 }
+
+.btn{
+    width: 120px;
+}
+
+tr th{
+    text-align: right;
+}
