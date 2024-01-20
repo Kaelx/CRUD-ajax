@@ -25,8 +25,6 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             } else {
                 echo mysqli_error($conn);
             }
-        } else {
-            echo "Please fill out all form.";
         }
 
     }

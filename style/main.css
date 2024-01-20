@@ -1,6 +1,6 @@
 .table-responsive{
     overflow-y: auto;
-    max-height: 500px;
+    max-height: 700px;
 }
 
 .table-responsive th {
@@ -14,6 +14,11 @@
 
 .container th{
     font-weight: bold;
+    text-align: right;
+}
+.table-wew th{
+    text-align: center;
+
 }
 
 td{
@@ -24,6 +29,6 @@ td{
     width: 120px;
 }
 
-tr th{
-    text-align: right;
+th, td {
+    color: black !important;
 }
