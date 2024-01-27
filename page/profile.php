@@ -6,8 +6,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
 
     $query = "SELECT * FROM users WHERE id = '$id'";
     $result = mysqli_query($conn, $query);
-}
 
+    if (mysqli_num_rows($result) == 0) {
+        header("Location: javascript://history.go(-1)");
+        exit;
+    }
+}
 
 
 ?>
