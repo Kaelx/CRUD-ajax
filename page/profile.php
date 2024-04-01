@@ -75,7 +75,11 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
                         </tbody>
                     </table>
                 </div>
-                <a class="btn btn-primary" href="../index.php">BACK</a>
+                <div class="text-center">
+                    <button class="btn btn-success">UPDATE</button>
+                    <button class="btn btn-danger">DELETE</button>
+                    <a class="btn btn-primary" href="../index.php">BACK</a>
+                </div>
             </div>
         </div>
     </div>

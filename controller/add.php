@@ -21,12 +21,14 @@ if ($_SERVER["REQUEST_METHOD"] == 'POST') {
             $sql = "INSERT INTO users (fname, mname, lname, bday, age, address, phonenum, profile) VALUES ('$fname', '$mname', '$lname', '$bday', '$age', '$address', '$phonenum', '$upload_path')";
 
             if (mysqli_query($conn, $sql)) {
-                echo "Added Profile Successfully";
+                echo 1;
             } else {
                 echo mysqli_error($conn);
             }
         }
 
+    }else{
+        echo 0;
     }
 }
 ?>

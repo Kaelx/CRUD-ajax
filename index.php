@@ -21,40 +21,40 @@ $res = mysqli_query($conn, $select);
         <div class="row justify-content-center">
             <div class="col-lg-5 col-md-6 col-sm-12">
                 <h3 class="text-center">REGISTER</h3>
-                <form action="#" method="post">
+                <form action="#" method="post" onsubmit="add(event)">
                     <div class="form-group mb-3">
                         <label for="fname">First Name</label>
-                        <input type="text" class="form-control" id="fname" name="fname">
+                        <input type="text" class="form-control" id="fname" name="fname" autofocus required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="mname">Middle Name</label>
-                        <input type="text" class="form-control" id="mname" name="mname">
+                        <input type="text" class="form-control" id="mname" name="mname" required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="lname">Last Name</label>
-                        <input type="text" class="form-control" id="lname" name="lname">
+                        <input type="text" class="form-control" id="lname" name="lname" required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="bday">Birthdate</label>
-                        <input type="date" class="form-control" id="bday" name="bday" max="2020-12-31">
+                        <input type="date" class="form-control" id="bday" name="bday" max="2020-12-31" required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="age">Age</label>
-                        <input type="number" class="form-control" id="age" name="age" oninput="if(value.length>3)value=value.slice(0,3)">
+                        <input type="number" class="form-control" id="age" name="age" oninput="if(value.length>3)value=value.slice(0,3)" required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="address">Address</label>
-                        <input type="text" class="form-control" id="address" name="address">
+                        <input type="text" class="form-control" id="address" name="address" required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="phonenum">Phone Number</label>
-                        <input type="number" class="form-control" id="phonenum" name="phonenum" oninput="if(value.length>11)value=value.slice(0,11)">
+                        <input type="number" class="form-control" id="phonenum" name="phonenum" oninput="if(value.length>11)value=value.slice(0,11)" required>
                     </div>
                     <div class="form-group mb-3">
                         <label for="profile">Profile Picture</label>
-                        <input type="file" class="form-control" id="profile" name="profile">
+                        <input type="file" class="form-control" id="profile" name="profile" required>
                     </div>
-                    <button type="submit" class="btn btn-success mt-3" onclick="add(event)">Submit</button>
+                    <button type="submit" class="btn btn-success mt-3">Submit</button>
                 </form>
             </div>
 
