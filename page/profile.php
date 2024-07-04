@@ -1,7 +1,6 @@
 <?php
 include '../controller/config.php';
 
-if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
     $id = $_GET['id'];
 
     $query = "SELECT * FROM users WHERE id = '$id'";
@@ -11,7 +10,6 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
         header("Location: javascript://history.go(-1)");
         exit;
     }
-}
 
 
 ?>
@@ -26,6 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
     <title>Profile</title>
     <link rel="stylesheet" href="../style/bootstrap.min.css">
     <link rel="stylesheet" href="../style/main.css">
+
 </head>
 
 <body>
@@ -42,6 +41,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
                                         <img src="<?php echo $row['profile']; ?>" alt="<?php echo $row['fname']; ?> profile picture" class="img-fluid" style="max-width: 200px;">
                                         <P><strong>Profile Picture</strong></P>
                                     </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">ID:</th>
+                                    <td><?php echo $row['id']; ?></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">First Name:</th>
@@ -71,18 +74,20 @@ if ($_SERVER['REQUEST_METHOD'] == 'GET' && isset($_GET['id'])) {
                                     <th scope="row">Phone Number:</th>
                                     <td><?php echo $row['phonenum']; ?></td>
                                 </tr>
-                            <?php }; ?>
                         </tbody>
                     </table>
                 </div>
                 <div class="text-center">
-                    <button class="btn btn-success">UPDATE</button>
-                    <button class="btn btn-danger">DELETE</button>
+                    <button class="btn btn-success" onclick="updateProfile()">UPDATE</button>
+                    <button class="btn btn-danger" onclick="delProfile(<?php echo $row['id'] ?>)">DELETE</button>
                     <a class="btn btn-primary" href="../index.php">BACK</a>
                 </div>
+            <?php }; ?>
             </div>
         </div>
     </div>
 </body>
+<script src="../js/jquery.js"></script>
+<script src="../js/main.js"></script>
 
 </html>
