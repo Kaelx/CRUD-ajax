@@ -2,8 +2,6 @@
 $host =  'localhost';
 $user =  'root';
 $password =  '';
-$dbname = 'db_users';
+$dbname = 'users_db';
 
-$conn = mysqli_connect($host, $user, $password, $dbname)
-
-?>
+$conn = mysqli_connect($host, $user, $password, $dbname);
