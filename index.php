@@ -2,7 +2,8 @@
 include 'controller/config.php';
 
 $select = "SELECT * FROM users";
-$res = mysqli_query($conn, $select);
+$qry = $conn->query($select);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -58,7 +59,7 @@ $res = mysqli_query($conn, $select);
                 </form>
             </div>
 
-            
+
             <div class="col-lg-6 col-md-6 col-sm-12">
                 <h3 class="text-center">USERS</h3>
                 <div class="table-wew">
@@ -71,7 +72,9 @@ $res = mysqli_query($conn, $select);
                             </tr>
                         </thead>
                         <tbody>
-                            <?php while ($row = mysqli_fetch_assoc($res)) { ?>
+                            <?php
+                            while ($row = $qry->fetch_assoc()) :
+                            ?>
                                 <tr>
                                     <td><?php echo $row['id']; ?></td>
                                     <td><?php echo $row['fname'] . ' ' . $row['lname']; ?></td>
@@ -79,7 +82,7 @@ $res = mysqli_query($conn, $select);
                                         <button class="btn btn-primary" onclick="viewProfile('<?php echo $row['id']; ?>')">View Profile</button>
                                     </td>
                                 </tr>
-                            <?php } ?>
+                            <?php endwhile;  ?>
                         </tbody>
                     </table>
                 </div>
